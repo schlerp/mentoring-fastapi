@@ -14,5 +14,8 @@ This is a project for exploring mentoring via pair programming using FastAPI as 
     ```bash
     # from the folder you house your repos in
     uv init --lib ./mentoring-fastapi
+
+    # add the fastapi dependency
+    uv add "fastapi[standard]"
     ```
 </details>
