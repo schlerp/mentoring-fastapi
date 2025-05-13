@@ -11,7 +11,6 @@ This is a project for exploring mentoring via pair programming using FastAPI as 
     <br>
     The following are the commands I used:
 
-````
 ```bash
 # from the folder you house your repos in
 uv init --lib ./mentoring-fastapi
@@ -73,6 +72,5 @@ class TestEchoGet:
         assert response.status_code == 200
         assert response.json() == {"greeting": f"Hello {name}!"}
 ```
-````
 
 </details>

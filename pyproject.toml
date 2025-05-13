@@ -1,7 +1,7 @@
 [project]
 name = "mentoring-fastapi"
-version = "0.1.0"
-description = "Add your description here"
+version = "0.0.1"
+description = "A simple project to facilitate mentoring/pair programming and learn about project configuration and python typing."
 readme = "README.md"
 authors = [
     { name = "PattyC", email = "patrickcoffey91@gmail.com" }
