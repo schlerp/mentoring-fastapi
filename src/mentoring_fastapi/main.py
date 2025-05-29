@@ -1,13 +1,10 @@
 from fastapi import FastAPI
-import pydantic
+
+from mentoring_fastapi import schemas
 
 app = FastAPI()
 
 
-class EchoResponse(pydantic.BaseModel):
-    greeting: str
-
-
 @app.get("/echo/{name}")
-async def echo(name: str) -> EchoResponse:
-    return EchoResponse(greeting=f"Hello {name}!")
+async def echo(name: str) -> schemas.EchoResponse:
+    return schemas.EchoResponse(greeting=f"Hello {name}!")

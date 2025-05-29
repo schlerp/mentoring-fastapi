@@ -74,3 +74,39 @@ class TestEchoGet:
 ```
 
 </details>
+
+## Step 2
+
+<details>
+    <summary>Create some endpoints the receive and send known schemas.</summary>
+    <br>
+    The following are the commands I used:
+
+Create a new file called `schemas.py` in the `mentoring_fastapi` folder and move the `EchoResponse` schema there.
+
+This file should look like the following:
+
+```python
+import pydantic
+
+
+class EchoResponse(pydantic.BaseModel):
+    greeting: str
+```
+
+Update the echo GET endpoint to use the schema from the new file and clean up the `main.py` file so it looks like the following.
+
+```python
+from fastapi import FastAPI
+
+from mentoring_fastapi import schemas
+
+app = FastAPI()
+
+
+@app.get("/echo/{name}")
+async def echo(name: str) -> schemas.EchoResponse:
+    return schemas.EchoResponse(greeting=f"Hello {name}!")
+```
+
+</details>
